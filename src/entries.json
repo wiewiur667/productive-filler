@@ -1,0 +1,68 @@
+{
+  "standup": {
+    "type": "time_entries",
+    "attributes": {
+      "note": "Standup",
+      "time": 30,
+      "date": "%DATE%"
+    },
+    "relationships": {
+      "person": {
+        "data": {
+          "type": "people",
+          "id": "%PERSON_ID%"
+        }
+      },
+      "service": {
+        "data": {
+          "type": "services",
+          "id": "7190287"
+        }
+      }
+    }
+  },
+  "department_standup": {
+    "type": "time_entries",
+    "attributes": {
+      "note": "Department Standup",
+      "time": 5,
+      "date": "%DATE%"
+    },
+    "relationships": {
+      "person": {
+        "data": {
+          "type": "people",
+          "id": "%PERSON_ID%"
+        }
+      },
+      "service": {
+        "data": {
+          "type": "services",
+          "id": "5473142"
+        }
+      }
+    }
+  },
+  "task_feature": {
+    "type": "time_entries",
+    "attributes": {
+      "note": "Implementing new feature",
+      "time": 5,
+      "date": "%DATE%"
+    },
+    "relationships": {
+      "person": {
+        "data": {
+          "type": "people",
+          "id": "%PERSON_ID%"
+        }
+      },
+      "service": {
+        "data": {
+          "type": "services",
+          "id": "7190328"
+        }
+      }
+    }
+  }
+}

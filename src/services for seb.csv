@@ -1,0 +1,80 @@
+id,type,attributes_name,attributes_position,attributes_deleted_at,attributes_billable,attributes_description,attributes_time_tracking_enabled,attributes_expense_tracking_enabled,attributes_booking_tracking_enabled,attributes_origin_service_id,attributes_initial_service_id,attributes_budget_cap_enabled,attributes_custom_fields,relationships_organization_data_type,relationships_organization_data_id,relationships_service_type_meta_included,relationships_deal_data_type,relationships_deal_data_id,relationships_person_meta_included,relationships_section_data_type,relationships_section_data_id,relationships_custom_field_people_meta_included,relationships_custom_field_attachments_meta_included,attributes_editor_config_name,attributes_editor_config_service_type_id,attributes_editor_config_override_editor_service_type
+7537217,services,Development Management,1,,True,,True,False,True,7102707,7537217,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7537221,services,Documentation and Communication,4,,True,,True,False,True,7102711,7537221,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7537218,services,Full Stack Development,2,,True,,True,False,True,7102708,7537218,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7537227,services,Implementation,6,,True,,True,False,True,7514208,7537227,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7537219,services,Internal Testing,3,,True,,True,False,True,7102709,7537219,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7537222,services,Project Management,5,,True,,True,False,True,7102712,7537222,False,,organizations,4506,False,deals,2488160,False,sections,1445687,False,False,,,
+7190291,services,Contractor Full Stack Development ,8,,False,,True,True,True,,7190291,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190284,services,Development Management,1,,True,,True,False,True,,7190284,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190285,services,Internal Testing,2,,True,,True,False,True,,7190285,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190286,services,Knowledge Base Documentation,3,,True,,True,False,True,,7190286,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190287,services,Meetings & Correspondence,4,,True,,True,False,True,,7190287,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190288,services,Project Management,5,,True,,True,False,True,,7190288,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190289,services,R&D,6,,True,,True,False,True,,7190289,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190290,services,UI / UX Development,7,,True,,True,False,True,,7190290,False,,organizations,4506,False,deals,2398549,False,sections,1358621,False,False,,,
+7190327,services,Development Management,1,,True,,True,False,True,,7190327,False,,organizations,4506,False,deals,2398557,False,sections,1358629,False,False,,,
+7190328,services,Full Stack Development,2,,True,,True,False,True,,7190328,False,,organizations,4506,False,deals,2398557,False,sections,1358629,False,False,,,
+7190329,services,Internal Testing,3,,True,,True,False,True,,7190329,False,,organizations,4506,False,deals,2398557,False,sections,1358629,False,False,,,
+7190330,services,R&D,4,,True,,True,False,True,,7190330,False,,organizations,4506,False,deals,2398557,False,sections,1358629,False,False,,,
+7190331,services,Third party support,5,,False,,True,True,True,,7190331,False,,organizations,4506,False,deals,2398557,False,sections,1358629,False,False,,,
+7672939,services,Internal Testing,1,,True,,True,False,True,,7672939,False,,organizations,4506,False,deals,2520310,False,sections,1478850,False,False,,,
+7672941,services,Project/Client Management,3,,True,,True,False,True,,7672941,False,,organizations,4506,False,deals,2520310,False,sections,1478850,False,False,,,
+7672940,services,R&D,2,,True,,True,False,True,,7672940,False,,organizations,4506,False,deals,2520310,False,sections,1478850,False,False,,,
+700932,services,Support,1,,True,,True,False,True,,700932,False,,organizations,4506,False,deals,343269,False,sections,1357758,False,False,,,
+7188157,services,Development Management,1,,True,,True,False,True,,7188157,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188162,services,Documentation,6,,True,,True,False,True,,7188162,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188158,services,Full Stack Development,2,,True,,True,False,True,,7188158,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188159,services,Internal Testing,3,,True,,True,False,True,,7188159,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188160,services,Meetings & Correspondence,4,,True,,True,False,True,,7188160,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188161,services,Project Management,5,,True,,True,False,True,,7188161,False,,organizations,4506,False,deals,2398037,False,sections,1358110,False,False,,,
+7188080,services,Development Management,1,,True,,True,False,True,,7188080,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188085,services,Documentation,6,,True,,True,False,True,,7188085,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188081,services,Full Stack Development,2,,True,,True,False,True,,7188081,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188082,services,Internal Testing,3,,True,,True,False,True,,7188082,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188083,services,Meetings & Correspondence,4,,True,,True,False,True,,7188083,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188084,services,Project Management,5,,True,,True,False,True,,7188084,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+7188086,services,UI/UX,7,,True,,True,False,True,,7188086,False,,organizations,4506,False,deals,2398019,False,sections,1358097,False,False,,,
+5473134,services,Appraisals,1,,True,,True,False,True,,5473134,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473135,services,Authorised Absence,2,,True,,True,False,True,,5473135,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473136,services,Client pitch/new business,3,,True,,True,False,True,,5473136,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473143,services,General admin,10,,True,,True,False,True,,5473143,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473137,services,Holiday,4,,True,,True,False,True,,5473137,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473146,services,Knowledgebase Documentation,13,,True,,True,False,True,,5473146,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473142,services,Meeting,9,,True,,True,False,True,,5473142,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473138,services,Paternity/maternity leave,5,,True,,True,False,True,,5473138,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473147,services,Project Placeholder,14,,True,,True,False,True,,5473147,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473144,services,R&D,11,,True,,True,False,True,,5473144,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473139,services,Sick leave,6,,True,,True,False,True,,5473139,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473145,services,Software maintenance,12,,True,,True,False,True,,5473145,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473140,services,Team management,7,,True,,True,False,True,,5473140,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+5473141,services,Training,8,,True,,True,False,True,,5473141,False,,organizations,4506,False,deals,1872158,False,sections,945956,False,False,,,
+7245214,services,Development Management,1,,True,,True,False,True,,7245214,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Development Management,69223,False
+7245215,services,Documentation and Communication,2,,True,,True,False,True,,7245215,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Documentation and Communication,270154,False
+7245216,services,Full Stack Development,3,,True,,True,False,True,,7245216,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Full Stack Development,29322,False
+7245219,services,Implementation,6,,True,,True,False,True,,7245219,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Implementation,29322,False
+7245217,services,Internal Testing,4,,True,,True,False,True,,7245217,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Internal Testing,27752,False
+7245218,services,Project Management,5,,True,,True,False,True,,7245218,False,,organizations,4506,False,deals,2414167,False,sections,1376331,False,False,Project Management,25226,False
+7499568,services,Development Management,1,,True,,True,False,True,,7499568,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Development Management,69223,False
+7499569,services,Documentation and Communication,2,,True,,True,False,True,,7499569,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Documentation and Communication,270154,False
+7499570,services,Full Stack Development,3,,True,,True,False,True,,7499570,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Full Stack Development,29322,False
+7499573,services,Implementation,6,,True,,True,False,True,,7499573,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Implementation,29322,False
+7499571,services,Internal Testing,4,,True,,True,False,True,,7499571,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Internal Testing,27752,False
+7499572,services,Project Management,5,,True,,True,False,True,,7499572,False,,organizations,4506,False,deals,2480288,False,sections,1436840,False,False,Project Management,25226,False
+7636869,services,Development Management,1,,True,,True,False,True,,7636869,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Development Management,69223,False
+7636870,services,Documentation and Communication,2,,True,,True,False,True,,7636870,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Documentation and Communication,270154,False
+7636871,services,Full Stack Development,3,,True,,True,False,True,,7636871,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Full Stack Development,29322,False
+7636874,services,Implementation,6,,True,,True,False,True,,7636874,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Implementation,29322,False
+7636872,services,Internal Testing,4,,True,,True,False,True,,7636872,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Internal Testing,27752,False
+7636873,services,Project Management,5,,True,,True,False,True,,7636873,False,,organizations,4506,False,deals,2511676,False,sections,1468932,False,False,Project Management,25226,False
+7380359,services,Data Input,1,,True,,True,False,True,7177005,7380359,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380360,services,Development Management,2,,True,,True,False,True,7177006,7380360,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380361,services,Full Stack Development,3,,True,,True,False,True,7177007,7380361,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380362,services,Internal Testing,4,,True,,True,False,True,7177008,7380362,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380363,services,Knowledge Base Documentation,5,,True,,True,False,True,7177009,7380363,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380364,services,Meetings and Correspondence,6,,True,,True,False,True,7177010,7380364,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380365,services,Project Management,7,,True,,True,False,True,7177011,7380365,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380366,services,R&D,8,,True,,True,False,True,7177012,7380366,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380367,services,RFQ Development,9,,True,,True,False,True,7177013,7380367,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380368,services,Third Party Support,10,,True,,True,False,True,7177014,7380368,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
+7380369,services,UI / UX,11,,True,,True,False,True,7177015,7380369,False,,organizations,4506,False,deals,2448611,False,sections,1403688,False,False,,,
