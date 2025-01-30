@@ -19,7 +19,7 @@ const formattedDate = format(date, 'yyyy-MM-dd');
 const workingDayLength = 8 * 60;
 const entries = (await import('./entries.json', {with: {type: 'json'}})).default;
 
-const job = new CronJob('0 17 * * MON-FRI', async () => { // Cron job runs every weekday at 17:00
+const job = new CronJob(process.env.CRON_SCHEDULE as string, async () => { // Cron job runs every weekday at 17:00
   console.log('Running job...');
   console.log('Today is', formattedDate);
 

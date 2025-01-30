@@ -11,26 +11,11 @@ Everyone hates to put time into productive, so I've automated it for you. This s
 
 ## How to use
 
-**USE NPM**
-
 1. Clone the repository
-2. Install the dependencies
-3. Update the **entries.json** file with your task names ids and time
-4. Update cron time in index.ts
-5. Build the project
-
-6. Run
-
-```bash
-npm install -g node-windows
-npm link node-windows
-```
-
-7. Run
-
-```bash
-node windows-service-install.cjs
-```
-
-8. Accept prompts and start the service
-9. Check if service is running in services.msc
+2. Update /docker/.env file with your details
+3. (Optional) Change CRON time - its running at 17:00 MON-FRI by default
+4. Update src/entries.json with your tasks
+5. Build Docker image
+6. Run Docker container
+7. There is no step 5
+8. Profit
