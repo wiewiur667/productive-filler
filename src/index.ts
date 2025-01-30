@@ -12,14 +12,17 @@ const client = axios.create({
     'Content-Type': 'application/vnd.api+json'
   }
 });
-console.log('Hello, World!');
+console.log('Productive.io time filler!');
+console.log('API token:', process.env.PRODUCTIVE_API_TOKEN);
+console.log('Organization ID:', process.env.PRODUCTIVE_ORGANIZATION_ID);
+console.log('Person ID:', process.env.PRODUCTIVE_PERSON_ID);
 
 const date = new Date();
 const formattedDate = format(date, 'yyyy-MM-dd');
 const workingDayLength = 8 * 60;
 const entries = (await import('./entries.json', {with: {type: 'json'}})).default;
 
-const job = new CronJob(process.env.CRON_SCHEDULE as string, async () => { // Cron job runs every weekday at 17:00
+async function updateTime() {
   console.log('Running job...');
   console.log('Today is', formattedDate);
 
@@ -58,17 +61,21 @@ const job = new CronJob(process.env.CRON_SCHEDULE as string, async () => { // Cr
   } catch {
     console.error('Failed to fetch entries');
   }
+}
 
+
+const job = new CronJob(process.env.CRON_SCHEDULE as string, async () => { // Cron job runs every weekday at 17:00
+  await updateTime();
 });
 
 async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: number, note?: string) {
   const newEntry = JSON.parse(JSON.stringify(entries[templateKey])) as typeof entries['standup'];
   
   if(time)
-    newEntry.attributes.time ??= time;
+    newEntry.attributes.time = time;
 
   if(note)
-    newEntry.attributes.note ??= note;
+    newEntry.attributes.note = note;
 
   newEntry.relationships.person.data.id = process.env.PRODUCTIVE_PERSON_ID!;
   newEntry.attributes.date = formattedDate;
@@ -81,5 +88,7 @@ async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: numb
     console.error('Failed to insert new time entry');
   }
 }
+
+console.log('Job scheduled to run at:', job.nextDate().toString());
 
 job.start();
