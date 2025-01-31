@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { CronJob } from 'cron';
-import {format} from 'date-fns';
+import { format } from 'date-fns';
 import { EntryResult } from './EntryResult.interface';
 import process from 'node:process';
 
@@ -20,13 +20,16 @@ console.log('Person ID:', process.env.PRODUCTIVE_PERSON_ID);
 const date = new Date();
 const formattedDate = format(date, 'yyyy-MM-dd');
 const workingDayLength = 8 * 60;
-const entries = (await import('./entries.json', {with: {type: 'json'}})).default;
+const entries = (await import('./entries.json', { with: { type: 'json' } })).default;
+
+let job: CronJob | null = null;
 
 async function updateTime() {
   console.log('Running job...');
   console.log('Today is', formattedDate);
 
-  try{
+
+  try {
     const response = await client.get('/time_entries', {
       params: {
         'filter[after]': formattedDate,
@@ -34,7 +37,7 @@ async function updateTime() {
       }
     });
     const result: EntryResult[] = response.data.data;
-    if(result.length > 0 ) {
+    if (result.length > 0) {
       const totalTime = result.reduce((acc, entry) => acc + entry.attributes.time, 0);
       console.log('Entries found, total time is:', totalTime);
       console.log(result.map(entry => ({
@@ -42,39 +45,41 @@ async function updateTime() {
         time: entry.attributes.time,
         note: entry.attributes.note
       })));
-  
-      if(totalTime < workingDayLength) {
+
+      if (totalTime < workingDayLength) {
         insertNewTimeEntry('task_feature', workingDayLength - totalTime);
       }
     } else {
       console.log('No entries found for today');
-      let entiresTotalTime = 0; 
-  
+      let entiresTotalTime = 0;
+
       insertNewTimeEntry('standup');
       entiresTotalTime += entries['standup'].attributes.time;
-  
+
       insertNewTimeEntry('department_standup');
       entiresTotalTime += entries['department_standup'].attributes.time;
-  
+
       insertNewTimeEntry('task_feature', workingDayLength - entiresTotalTime);
     }
   } catch {
     console.error('Failed to fetch entries');
   }
+  if (job)
+    console.log('Job scheduled to run at:', job.nextDate().toString());
 }
 
 
-const job = new CronJob(process.env.CRON_SCHEDULE as string, async () => { // Cron job runs every weekday at 17:00
+job = new CronJob(process.env.CRON_SCHEDULE as string, async () => {
   await updateTime();
-});
+}, null, true);
 
 async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: number, note?: string) {
   const newEntry = JSON.parse(JSON.stringify(entries[templateKey])) as typeof entries['standup'];
-  
-  if(time)
+
+  if (time)
     newEntry.attributes.time = time;
 
-  if(note)
+  if (note)
     newEntry.attributes.note = note;
 
   newEntry.relationships.person.data.id = process.env.PRODUCTIVE_PERSON_ID!;
@@ -88,7 +93,3 @@ async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: numb
     console.error('Failed to insert new time entry');
   }
 }
-
-console.log('Job scheduled to run at:', job.nextDate().toString());
-
-job.start();
