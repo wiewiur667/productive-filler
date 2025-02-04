@@ -11,12 +11,13 @@ services:
   productive-filler:
     build:
       context: ../
-    environment:
-      - NODE_ENV=production
-      - CRON_SCHEDULE=${CRON_SCHEDULE}
-      - PRODUCTIVE_API_TOKEN=${PRODUCTIVE_API_TOKEN}
-      - PRODUCTIVE_ORGANIZATION_ID=${PRODUCTIVE_ORGANIZATION_ID}
-      - PRODUCTIVE_PERSON_ID=${PRODUCTIVE_PERSON_ID}
+    env_file:
+      - path: .env
+        required: true # default
+        format: raw
+      - path: dev.env
+        required: false
+        format: raw
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the

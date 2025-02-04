@@ -16,7 +16,7 @@ console.log('Productive.io time filler!');
 console.log('API token:', process.env.PRODUCTIVE_API_TOKEN);
 console.log('Organization ID:', process.env.PRODUCTIVE_ORGANIZATION_ID);
 console.log('Person ID:', process.env.PRODUCTIVE_PERSON_ID);
-
+console.log('CRON:', process.env.CRON_SCHEDULE);
 const date = new Date();
 const formattedDate = format(date, 'yyyy-MM-dd');
 const workingDayLength = 8 * 60;
@@ -69,9 +69,11 @@ async function updateTime() {
 }
 
 
-job = new CronJob(process.env.CRON_SCHEDULE as string, async () => {
+job = new CronJob(process.env.CRON_SCHEDULE?.toString() ?? '', async () => {
   await updateTime();
 }, null, true);
+
+console.log('Job scheduled to run at:', job.nextDate().toString());
 
 async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: number, note?: string) {
   const newEntry = JSON.parse(JSON.stringify(entries[templateKey])) as typeof entries['standup'];
@@ -93,3 +95,7 @@ async function insertNewTimeEntry(templateKey: keyof typeof entries, time?: numb
     console.error('Failed to insert new time entry');
   }
 }
+
+new CronJob('* * * * *', () => {
+  console.log('KeepAlive ping');
+}, null, true);
